@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Deposit Calculator</title>
+    <style>
+        label {font-weight: bold;}
+        input+label {font-weight: normal;}
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <form action="DepositCalculator.php" method="post">
+            <br/>
+            <div class="row">
+                <div class="col-md-6 text-center">
+                    <h1>Deposit Calculator</h1>
+                </div>
+            </div>
+            <br/>
+            <br/>
+            <div class="row">
+                <div class="col-md-2">
+                    <label for="prinAmount">Principal Amount ($)</label>
+                </div>
+                <div class="col-md-3 offset-1">
+                    <input class="form-control" type="number" step="0.01" name="prinAmount" id="prinAmount">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2">
+                    <label for="inteRate">Interest Rate (%)</label>
+                </div>
+                <div class="col-md-3 offset-1">
+                    <input class="form-control" type="number" step="0.01" name="inteRate" id="inteRate">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2">
+                    <label for="depoYears">Years To Deposit:</label>
+                </div>
+                <div class="col-md-3 offset-1">
+                    <select class="custom-select" name="depoYears" id="depoYears">
+                        <option disabled selected value class="text-center">--Select One of The Options--</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                        <option value="16">16</option>
+                        <option value="17">17</option>
+                        <option value="18">18</option>
+                        <option value="19">19</option>
+                        <option value="20">20</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2">
+                    <hr>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2">
+                    <label for="name">Name</label>
+                </div>
+                <div class="col-md-3 offset-1">
+                    <input class="form-control" type="text" name="name" id="name">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2">
+                    <label for="postal-code">Postal Code</label>
+                </div>
+                <div class="col-md-3 offset-1">
+                    <input class="form-control" type="text" name="postal-code" id="postal-code">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2">
+                    <label for="phone">Phone Number:</label>
+                    <p>(nnn-nnn-nnnn)</p>
+                </div>
+                <div class="col-md-3 offset-1">
+                    <input class="form-control" type="text" name="phone" id="phone">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2">
+                    <label for="email">Email Address:</label>
+                </div>
+                <div class="col-md-3 offset-1">
+                    <input class="form-control" type="email" name="email" id="email">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2">
+                    <hr>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    <label>
+                        Preferred Contact Method:
+                    </label>
+                </div>
+                <div class="col-md-2">
+                    <input type="radio" name="contact-method" value="phone" id="phone-method">
+                    <label for="phone-method">Phone</label>
+                    &nbsp;
+                    <input type="radio" name="contact-method" value="email" id="email-method">
+                    <label for="email-method">Email</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-5">
+                    <label>
+                        If phone is selected, when can we contact you?
+                        <br>
+                        (check all applicable)
+                    </label>
+                    <br>
+                    <input type="checkbox" name="morning" id="morning">
+                    <label for="morning">Morning</label>
+                    &nbsp;
+                    <input type="checkbox" name="afternoon" id="afternoon">
+                    <label for="afternoon">Afternoon</label>
+                    &nbsp;
+                    <input type="checkbox" name="evening" id="evening">
+                    <label for="evening">Evening</label>
+                </div>
+            </div>
+            <br/>
+            <div class="row">
+                <div class="col-md-5 text-center">
+                    <input class="btn btn-primary" type="submit" value="Calculate" name="submit" />
+                    <input class="btn btn-primary" type="reset" value="Reset" name="reset" />
+                </div>
+            </div>
+        </form>
+    </div>
+    
+</body>
+
+</html>
